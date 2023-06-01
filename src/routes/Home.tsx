@@ -2,8 +2,75 @@ import Logo from "../components/Logo";
 import NavLink from "../components/NavLink";
 import PrimaryButton from "../components/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton";
+import aboutpic1 from "../assets/aboutpic1.png";
+import {
+  faChartLine,
+  faUsers,
+  faNewspaper,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
+  const cards = [
+    {
+      icon: (
+        <FontAwesomeIcon
+          icon={faChartLine}
+          size="2xl"
+          className="bg-[#D6D1F833]/[20%] rounded-full p-7"
+        />
+      ),
+      title: "Analytics",
+      content:
+        "Analytics to track the number of views, likes and comment and also analyze the performance of your articles over a period of time",
+    },
+    {
+      icon: (
+        <FontAwesomeIcon
+          icon={faUsers}
+          size="2xl"
+          className="bg-[#D6D1F833]/[20%] rounded-full p-7"
+        />
+      ),
+      title: "Social interactions",
+      content:
+        "Users on the platform can interact with posts they like, comment and engage in discussions",
+    },
+    {
+      icon: (
+        <FontAwesomeIcon
+          icon={faNewspaper}
+          size="2xl"
+          className="bg-[#D6D1F833]/[20%] rounded-full p-7"
+        />
+      ),
+      title: "Content creation",
+      content:
+        "Write nice and appealing with our in-built markdown, a rich text editor",
+    },
+  ];
+
+  // type CardType = {
+  //   card: {
+  //     img: string;
+  //     title: string;
+  //     content: string;
+  //   }[];
+  // };
+
+  const cardList = cards.map((card) => {
+    return (
+      <div
+        key={card.title}
+        className="flex flex-col pt-[18px] gap-3 border-solid border-2 rounded-lg pl-[18px] w-[306px] h-[324px]"
+      >
+        <div>{card.icon}</div>
+        <h3 className="text-2xl">{card.title}</h3>
+        <p className="sub-text w-[254px] text-[#626262]">{card.content}</p>
+      </div>
+    );
+  });
+
   return (
     <div>
       <nav className="flex py-[13px] px-[72px] justify-between items-center">
@@ -32,7 +99,7 @@ const Home = () => {
       <section className="flex justify-center items-center h-[764px] bg-[#000000]/[50%]">
         <div className="flex flex-col gap-9 w-[984px] h-[240px] ">
           <section className="flex flex-col gap-5">
-            <h2 className="text-white text-5xl/[72px] font-bold">
+            <h2 className="text-white">
               Welcome to Chatter: A Haven for Text-Based Content
             </h2>
             <p className="text-white text-2xl">
@@ -46,6 +113,40 @@ const Home = () => {
               window.location.href = "/signup";
             }}
           />
+        </div>
+      </section>
+      <section
+        id="about"
+        className="flex flex-col justify-center items-center p-[72px]"
+      >
+        <div className="flex gap-[84px]">
+          <section className="flex flex-col gap-[34px]">
+            <h2>About Chatter</h2>
+            <p className="sub-text w-[686px] h-[162px]">
+              Chatter is a multi-functional platform where authors and readers
+              can have access to their own content. It aims to be a traditional
+              bookworm’s heaven and a blog to get access to more text based
+              content. Our vision is to foster an inclusive and vibrant
+              community where diversity is celebrated. We encourage
+              open-mindedness and respect for all individuals, regardless of
+              their backgrounds or beliefs. By promoting dialogue and
+              understanding, we strive
+            </p>
+          </section>
+          <img src={aboutpic1} alt="An image" />
+        </div>
+        <div className="pt-[96px] flex flex-col justify-center items-center gap-[54px]">
+          <section className="w-[1040px] ">
+            <h2 className="text-center">Why you should join chatter</h2>
+            <p>
+              Our goal is to make writers and readers see our platform as their
+              next heaven for blogging, ensuring ease in interactions,
+              connecting with like-minded peers, have access to favorite content
+              based on interests and able to communicate your great ideas with
+              people
+            </p>
+          </section>
+          <section className="flex gap-12 justify-start">{cardList}</section>
         </div>
       </section>
     </div>
