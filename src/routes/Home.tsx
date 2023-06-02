@@ -3,6 +3,7 @@ import NavLink from "../components/NavLink";
 import PrimaryButton from "../components/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton";
 import aboutpic1 from "../assets/aboutpic1.png";
+import reviewPic from "../assets/reviewPic.png";
 import {
   faChartLine,
   faUsers,
@@ -49,14 +50,6 @@ const Home = () => {
         "Write nice and appealing with our in-built markdown, a rich text editor",
     },
   ];
-
-  // type CardType = {
-  //   card: {
-  //     img: string;
-  //     title: string;
-  //     content: string;
-  //   }[];
-  // };
 
   const cardList = cards.map((card) => {
     return (
@@ -136,9 +129,9 @@ const Home = () => {
           <img src={aboutpic1} alt="An image" />
         </div>
         <div className="pt-[96px] flex flex-col justify-center items-center gap-[54px]">
-          <section className="w-[1040px] ">
+          <section className="flex flex-col gap-[24px] w-[1040px] ">
             <h2 className="text-center">Why you should join chatter</h2>
-            <p>
+            <p className="">
               Our goal is to make writers and readers see our platform as their
               next heaven for blogging, ensuring ease in interactions,
               connecting with like-minded peers, have access to favorite content
@@ -147,6 +140,31 @@ const Home = () => {
             </p>
           </section>
           <section className="flex gap-12 justify-start">{cardList}</section>
+        </div>
+      </section>
+      <section
+        id="reviews"
+        className="bg-[#FFEDCC80]/[50%] h-[492px] flex justify-center items-center "
+      >
+        <div className="flex flex-row gap-[26px]">
+          <img src={reviewPic} alt="Adebobola" className="rounded-full" />
+          <section className="w-[800px] flex flex-col justify-center gap-[24px]">
+            <div className="flex flex-col gap-[48px]">
+              <p>
+                "Chatter has become an integral part of my online experience. As
+                a user of this incredible blogging platform, I have discovered a
+                vibrant community of individuals who are passionate about
+                sharing their ideas and engaging in thoughtful discussions.”
+              </p>
+              <h3>
+                <span className="text-[32px]">Adebobola Muhydeen, </span>
+                <span className="sub-text">
+                  Software developer at Apple
+                </span>{" "}
+              </h3>
+            </div>
+            <PrimaryButton value="Join chatter" handleClick={() => {}} />
+          </section>
         </div>
       </section>
     </div>
