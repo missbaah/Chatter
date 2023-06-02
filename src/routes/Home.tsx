@@ -4,6 +4,9 @@ import PrimaryButton from "../components/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton";
 import aboutpic1 from "../assets/aboutpic1.png";
 import reviewPic from "../assets/reviewPic.png";
+import reviewer1 from "../assets/reviewer1.png";
+import reviewer2 from "../assets/reviewer2.png";
+import reviewer3 from "../assets/reviewer3.png";
 import {
   faChartLine,
   faUsers,
@@ -128,7 +131,7 @@ const Home = () => {
           </section>
           <img src={aboutpic1} alt="An image" />
         </div>
-        <div className="pt-[96px] flex flex-col justify-center items-center gap-[54px]">
+        <div className="pt-[96px] pb-[107px] flex flex-col justify-center items-center gap-[54px]">
           <section className="flex flex-col gap-[24px] w-[1040px] ">
             <h2 className="text-center">Why you should join chatter</h2>
             <p className="">
@@ -147,7 +150,9 @@ const Home = () => {
         className="bg-[#FFEDCC80]/[50%] h-[492px] flex justify-center items-center "
       >
         <div className="flex flex-row gap-[26px]">
-          <img src={reviewPic} alt="Adebobola" className="rounded-full" />
+          <div className="flex flex-col justify-center items-center p-8">
+            <img src={reviewPic} alt="Adebobola" className="rounded-full" />
+          </div>
           <section className="w-[800px] flex flex-col justify-center gap-[24px]">
             <div className="flex flex-col gap-[48px]">
               <p>
@@ -167,6 +172,58 @@ const Home = () => {
           </section>
         </div>
       </section>
+      <section className="flex justify-center">
+        <div className="flex gap-[113px] py-24 px-24">
+          <div className="flex gap-7">
+            <div className="flex flex-col gap-[91px]">
+              <img src={reviewer1} alt="person" className="rounded-full" />
+              <img src={reviewer2} alt="person" className="rounded-full" />
+            </div>
+            <img
+              src={reviewer3}
+              alt="person"
+              className="rounded-full self-center "
+            />
+          </div>
+          <div className="flex flex-col gap-8 ">
+            <div className="w-[655px] flex flex-col gap-6">
+              <h2>Write, read and connect with great minds on chatter</h2>
+              <p>
+                Share people your great ideas, and also read write-ups based on
+                your interests. connect with people of same interests and goals{" "}
+              </p>
+            </div>
+            <PrimaryButton value="Get started" handleClick={() => {}} />
+          </div>
+        </div>
+      </section>
+      <footer className="bg-[#FFEDCC80]/[50%] h-[402px] flex justify-center gap-[218px] pt-[60px]">
+        <Logo />
+        <div className="flex flex-col gap-7">
+          <h3 className="heading3">Explore</h3>
+          <div className="flex flex-col gap-[16px]">
+            <p>community</p>
+            <p>Trending blogs</p>
+            <p>Chatter for teams</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-7">
+          <h3 className="heading3">Support</h3>
+          <div className="flex flex-col gap-[16px]">
+            <p>Support docs</p>
+            <p>Join slack</p>
+            <p>Contact</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-7">
+          <h3 className="heading3">Official blog</h3>
+          <div className="flex flex-col gap-[16px]">
+            {" "}
+            <p>Official blog</p>
+            <p>Engineering blog</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -10,6 +10,14 @@
   h2{
     @apply text-5xl/[72px] font-bold
   }
+
+  .heading3{
+    @apply font-medium text-2xl/[36px]
+  }
+
+  .center{
+    @apply flex flex-col justify-center, items-center
+  }
   .sub-text{
     @apply font-normal text-lg/[27px] text-[#000000]
   }
