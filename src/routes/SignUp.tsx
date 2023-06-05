@@ -1,17 +1,16 @@
-import PrimaryButton from "../components/base/PrimaryButton";
-import SecondaryButton from "../components/base/SecondaryButton";
 import SideBar from "../components/base/SideBar";
-import Input from "../components/forms/Input";
 import ProgessBar from "../components/forms/ProgessBar";
 import Signup from "../components/forms/Signup";
+import { SignUpContextProvider } from "../context/SignUpContext";
 
 const SignUp = () => {
   return (
-    <main className="flex ">
-      <SideBar />
-      <section className="flex flex-col items-center justify-center flex-1 ">
-        <ProgessBar title="Register as a Writer/Reader" page="signup" />
-        {/* <form action="" className="flex flex-col gap-6">
+    <SignUpContextProvider>
+      <main className="flex ">
+        <SideBar />
+        <section className="flex flex-col items-center justify-center flex-1 ">
+          <ProgessBar title="Register as a Writer/Reader" page="signup" />
+          {/* <form action="" className="flex flex-col gap-6">
           <div className="flex gap-3">
             <Input label="First name" type="text" width="252px" />
             <Input label="Last name" type="text" width="252px" />
@@ -48,9 +47,10 @@ const SignUp = () => {
             borderColor="#D0D0D0"
           />
         </form> */}
-        <Signup />
-      </section>
-    </main>
+          <Signup />
+        </section>
+      </main>
+    </SignUpContextProvider>
   );
 };
 

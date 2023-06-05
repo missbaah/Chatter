@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import PrimaryButton from "../base/PrimaryButton";
 import SecondaryButton from "../base/SecondaryButton";
 import Input from "./Input";
+import { SignUpContext } from "../../context/SignUpContext";
 
 const Signup = () => {
+  const signupContext = useContext(SignUpContext);
   return (
     <form action="" className="flex flex-col gap-6">
       <div className="flex gap-3">
@@ -24,8 +27,11 @@ const Signup = () => {
       <Input label="Password" type="password" />
       <Input label="Confirm Password" type="password" />
       <PrimaryButton
+        type="submit"
         value="Create account"
-        handleClick={() => {}}
+        handleClick={() => {
+          signupContext?.updateSetStepCount;
+        }}
         width="529px"
       />
       <SecondaryButton
