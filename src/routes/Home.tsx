@@ -98,7 +98,7 @@ const Home = () => {
             <h2 className="text-white">
               Welcome to Chatter: A Haven for Text-Based Content
             </h2>
-            <p className="text-white text-2xl">
+            <p className="text-white text-2xl w-[750px]">
               Unleash the Power of Words, Connect with Like-minded Readers and
               Writers
             </p>
