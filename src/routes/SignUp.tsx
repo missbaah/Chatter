@@ -1,6 +1,6 @@
-import Logo from "../components/Logo";
-import PrimaryButton from "../components/PrimaryButton";
-import Input from "../components/signup/Input";
+import Logo from "../components/base/Logo";
+import PrimaryButton from "../components/base/PrimaryButton";
+import Input from "../components/forms/Input";
 
 const SignUp = () => {
   return (
