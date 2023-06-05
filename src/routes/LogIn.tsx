@@ -1,16 +1,15 @@
-import { useCallback } from "react";
 import PrimaryButton from "../components/base/PrimaryButton";
 import SideBar from "../components/base/SideBar";
 import Input from "../components/forms/Input";
+import ProgessBar from "../components/forms/ProgessBar";
 
 const LogIn = () => {
   return (
     <main className="flex ">
-      <section className="bg-black/50 h-[1024px] w-[622px] flex flex-col justify-center px-9">
-        <SideBar />
-      </section>
+      <SideBar />
       <section className="flex flex-col items-center justify-start mt-[96px] flex-1 ">
-        <div className="w-[520px]">
+        <ProgessBar title="Welcome Back" page="login" />
+        {/* <div className="w-[520px]">
           <div id="progressbar" className="flex flex-col gap-6">
             <section className="flex justify-between w-[440px]">
               <button
@@ -31,14 +30,12 @@ const LogIn = () => {
               Welcome Back
             </h3>
           </div>
-
-          <form action="" className="flex flex-col gap-6">
-            <Input label="Email address" type="email" />
-            <Input label="Password" type="password" />
-
-            <PrimaryButton value="Login" handleClick={() => {}} width="529px" />
-          </form>
-        </div>
+        </div> */}
+        <form action="" className="flex flex-col gap-6">
+          <Input label="Email address" type="email" />
+          <Input label="Password" type="password" />
+          <PrimaryButton value="Login" handleClick={() => {}} width="529px" />
+        </form>
       </section>
     </main>
   );
