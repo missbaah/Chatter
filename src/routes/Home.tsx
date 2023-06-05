@@ -1,5 +1,5 @@
 import Logo from "../components/base/Logo";
-import NavLink from "../components/NavLink";
+import NavLink from "../components/base/NavLink";
 import PrimaryButton from "../components/base/PrimaryButton";
 import SecondaryButton from "../components/base/SecondaryButton";
 import aboutpic1 from "../assets/aboutpic1.png";
