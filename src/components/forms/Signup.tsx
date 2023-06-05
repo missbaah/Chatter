@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import PrimaryButton from "../base/PrimaryButton";
+
 import SecondaryButton from "../base/SecondaryButton";
 import Input from "./Input";
 import { SignUpContext } from "../../context/SignUpContext";
+import PrimaryButtonLong from "../base/PrimaryButtonLong";
 
 const Signup = () => {
   const signupContext = useContext(SignUpContext);
@@ -27,14 +28,13 @@ const Signup = () => {
       <Input label="Email address" type="email" />
       <Input label="Password" type="password" />
       <Input label="Confirm Password" type="password" />
-      <PrimaryButton
+      <PrimaryButtonLong
         type="submit"
         value="Create account"
         handleClick={(event) => {
           event.preventDefault();
           signupContext?.updateSetStepCount();
         }}
-        width="529px"
       />
       <SecondaryButton
         value="Sign up with google"
