@@ -3,7 +3,8 @@ import { createContext, useCallback, useState } from "react";
 type SignUpContextType = {
   stepCount: number;
   setStepCount: React.Dispatch<React.SetStateAction<number>>;
-  updateSetStepCount: () => void;
+  addSetStepCount: () => void;
+  substractStepCount: () => void;
 };
 
 type SignUpContextProviderProps = {
@@ -16,13 +17,15 @@ export const SignUpContextProvider = ({
   children,
 }: SignUpContextProviderProps) => {
   const [stepCount, setStepCount] = useState(0);
-  const updateSetStepCount = useCallback(() => {
+  const addSetStepCount = useCallback(() => {
     setStepCount((prevStepCount) => prevStepCount + 1);
   }, [stepCount]);
-
+  const substractStepCount = useCallback(() => {
+    setStepCount((prevStepCount) => prevStepCount - 1);
+  }, []);
   return (
     <SignUpContext.Provider
-      value={{ stepCount, setStepCount, updateSetStepCount }}
+      value={{ stepCount, setStepCount, addSetStepCount, substractStepCount }}
     >
       {children}
     </SignUpContext.Provider>

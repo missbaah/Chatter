@@ -33,7 +33,7 @@ const Signup = () => {
         value="Create account"
         handleClick={(event) => {
           event.preventDefault();
-          signupContext?.updateSetStepCount();
+          signupContext?.addSetStepCount();
         }}
       />
       <SecondaryButton

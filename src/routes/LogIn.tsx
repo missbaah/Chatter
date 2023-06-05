@@ -1,4 +1,4 @@
-import PrimaryButton from "../components/base/PrimaryButton";
+import PrimaryButtonLong from "../components/base/PrimaryButtonLong";
 import SideBar from "../components/base/SideBar";
 import Input from "../components/forms/Input";
 import ProgessBar from "../components/forms/ProgessBar";
@@ -34,7 +34,7 @@ const LogIn = () => {
         <form action="" className="flex flex-col gap-6">
           <Input label="Email address" type="email" />
           <Input label="Password" type="password" />
-          <PrimaryButton value="Login" handleClick={() => {}} width="529px" />
+          <PrimaryButtonLong value="Login" handleClick={() => {}} />
         </form>
       </section>
     </main>
