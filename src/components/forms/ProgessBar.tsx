@@ -7,9 +7,9 @@ type ProgessBarProps = {
 
 const ProgessBar = (props: ProgessBarProps) => {
   const bar1 = document.getElementById("bar1");
-  console.log(bar1);
+  // console.log(bar1);
   const bar2 = document.getElementById("bar2");
-  console.log(bar2);
+  // console.log(bar2);
   useEffect(() => {
     if (props.page == "signup") {
       bar1?.classList.add("bg-blue-500");

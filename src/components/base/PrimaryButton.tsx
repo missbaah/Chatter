@@ -1,6 +1,6 @@
 type ButtonProps = {
   value: string;
-  handleClick: () => void;
+  handleClick: (event: React.MouseEvent) => void;
   width?: string;
   type?: string;
 };

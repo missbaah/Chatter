@@ -1,16 +1,20 @@
+import { useContext } from "react";
 import SideBar from "../components/base/SideBar";
 import ProgessBar from "../components/forms/ProgessBar";
 import Signup from "../components/forms/Signup";
-import { SignUpContextProvider } from "../context/SignUpContext";
+import { SignUpContext } from "../context/SignUpContext";
+import OTP from "../components/forms/OTP";
 
 const SignUp = () => {
+  const signupContext = useContext(SignUpContext);
+
+  console.log(signupContext?.stepCount);
   return (
-    <SignUpContextProvider>
-      <main className="flex ">
-        <SideBar />
-        <section className="flex flex-col items-center justify-center flex-1 ">
-          <ProgessBar title="Register as a Writer/Reader" page="signup" />
-          {/* <form action="" className="flex flex-col gap-6">
+    <main className="flex ">
+      <SideBar />
+      <section className="flex flex-col items-center justify-center flex-1 ">
+        <ProgessBar title="Register as a Writer/Reader" page="signup" />
+        {/* <form action="" className="flex flex-col gap-6">
           <div className="flex gap-3">
             <Input label="First name" type="text" width="252px" />
             <Input label="Last name" type="text" width="252px" />
@@ -47,10 +51,13 @@ const SignUp = () => {
             borderColor="#D0D0D0"
           />
         </form> */}
+        {signupContext?.stepCount == 0 ? (
           <Signup />
-        </section>
-      </main>
-    </SignUpContextProvider>
+        ) : signupContext?.stepCount == 1 ? (
+          <OTP />
+        ) : undefined}
+      </section>
+    </main>
   );
 };
 

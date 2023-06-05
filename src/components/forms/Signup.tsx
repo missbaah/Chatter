@@ -6,6 +6,7 @@ import { SignUpContext } from "../../context/SignUpContext";
 
 const Signup = () => {
   const signupContext = useContext(SignUpContext);
+  // console.log(signupContext?.updateSetStepCount());
   return (
     <form action="" className="flex flex-col gap-6">
       <div className="flex gap-3">
@@ -29,8 +30,9 @@ const Signup = () => {
       <PrimaryButton
         type="submit"
         value="Create account"
-        handleClick={() => {
-          signupContext?.updateSetStepCount;
+        handleClick={(event) => {
+          event.preventDefault();
+          signupContext?.updateSetStepCount();
         }}
         width="529px"
       />
