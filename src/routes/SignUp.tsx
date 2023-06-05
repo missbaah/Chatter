@@ -1,26 +1,34 @@
-import Logo from "../components/base/Logo";
 import PrimaryButton from "../components/base/PrimaryButton";
 import SecondaryButton from "../components/base/SecondaryButton";
+import SideBar from "../components/base/SideBar";
 import Input from "../components/forms/Input";
 
 const SignUp = () => {
   return (
     <main className="flex ">
       <section className="bg-black/50 h-[1024px] w-[622px] flex flex-col justify-center px-9">
-        <div className="w-[550px] flex flex-col gap-6">
-          <Logo />
-          <p className="text-white text-2xl ">
-            Unleash the Power of Words, Connect with Like-minded Readers and
-            Writers
-          </p>
-        </div>
+        <SideBar />
       </section>
       <section className="flex flex-col items-center justify-center flex-1 ">
         <div className="w-[520px]">
           <div id="progressbar" className="flex flex-col gap-6">
             <section className="flex justify-between w-[440px]">
-              <h4 className="uppercase font-bold text-base">Register</h4>
-              <h4 className="uppercase font-bold text-base">Login</h4>
+              <button
+                className="uppercase font-bold text-base"
+                onClick={() => {
+                  window.location.href = "/signup";
+                }}
+              >
+                Register
+              </button>
+              <button
+                className="uppercase font-bold text-base"
+                onClick={() => {
+                  window.location.href = "/login";
+                }}
+              >
+                Login
+              </button>
             </section>
             <section className="flex">
               <div className="w-[220px] h-[6px] bg-blue-500"></div>

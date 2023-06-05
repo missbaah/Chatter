@@ -72,7 +72,7 @@ const Home = () => {
       <nav className="flex py-[13px] px-[72px] justify-between items-center">
         <Logo />
         <div className="flex gap-6">
-          <NavLink href="#about" title="Home" />
+          <NavLink href="/" title="Home" />
           <NavLink href="#about" title="About us" />
           <NavLink href="#about" title="Contact" />
           <NavLink href="#about" title="Blogs" />
