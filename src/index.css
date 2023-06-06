@@ -10,7 +10,12 @@
   h2{
     @apply text-5xl/[72px] font-bold
   }
-
+h4{
+  @apply font-normal text-[18px]/[27px]
+}
+li{
+  @apply text-black-400
+}
   .heading3{
     @apply font-medium text-2xl/[36px]
   }
