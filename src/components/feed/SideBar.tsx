@@ -57,7 +57,7 @@ const SideBar = () => {
 
   const listOfActionItems = actionItems.map((item) => {
     return (
-      <li key={item.name} className="flex items-center">
+      <li key={item.name} className="flex items-center gap-3">
         <img src={item.icon} alt={item.name} />
         <p>{item.name}</p>
       </li>
@@ -71,9 +71,7 @@ const SideBar = () => {
     <section className="flex flex-col gap-8 items-center text-left w-[268px] border border-black-100 h-screen">
       <Logo fontSize="5xl" fontWeight="semibold" />
       <SideBarSections title={titles[0]}>
-        <div className="ml-[30px]">
-          <ListContainer>{listOfActionItems}</ListContainer>
-        </div>
+        <ListContainer>{listOfActionItems}</ListContainer>
       </SideBarSections>
       <div className=" flex flex-col gap-[19px] ">
         <h4 className="flex items-center gap-3">
@@ -85,18 +83,16 @@ const SideBar = () => {
         <ListContainer>{listOfTrends}</ListContainer>
       </div>
       <SideBarSections title={titles[2]}>
-        <div className="ml-[30px]">
-          <ListContainer>
-            {accountItems.map((item) => {
-              return (
-                <li key={item.name} className="flex items-center">
-                  <img src={item.icon} alt={item.name} />
-                  <p>{item.name}</p>
-                </li>
-              );
-            })}
-          </ListContainer>
-        </div>
+        <ListContainer>
+          {accountItems.map((item) => {
+            return (
+              <li key={item.name} className="flex items-center gap-3">
+                <img src={item.icon} alt={item.name} />
+                <p>{item.name}</p>
+              </li>
+            );
+          })}
+        </ListContainer>
       </SideBarSections>
       <button className="text-[#FF1400]">Log out</button>
     </section>

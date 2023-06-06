@@ -5,7 +5,9 @@ type ListContainerProps = {
 };
 
 const ListContainer = ({ children }: ListContainerProps) => {
-  return <ul className="w-[174px] flex flex-col gap-3 indent-4">{children}</ul>;
+  return (
+    <ul className="w-[174px] flex flex-col gap-3 ml-[30px]">{children}</ul>
+  );
 };
 
 export default React.memo(ListContainer);
