@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../base/Logo";
 import Drafts from "../../assets/Drafts.svg";
 import Bookmarks from "../../assets/Bookmarks.svg";
 import Analytics from "../../assets/Analytics.svg";
@@ -65,11 +64,13 @@ const SideBar = () => {
   });
 
   const listOfTrends = trends.map((trend) => {
-    return <li>{trend}</li>;
+    return <li key={trend}>{trend}</li>;
   });
   return (
-    <section className="flex flex-col gap-8 items-center text-left w-[268px] border border-black-100 h-screen">
-      <Logo fontSize="5xl" fontWeight="semibold" />
+    <section className="flex flex-col gap-8 items-end text-left w-[268px] border border-black-100 h-screen">
+      <div className="self-start ml-[58px]">
+        <h1 className="text-blue-500 text-[32px] font-medium">CHATTER</h1>
+      </div>
       <SideBarSections title={titles[0]}>
         <ListContainer>{listOfActionItems}</ListContainer>
       </SideBarSections>
@@ -94,7 +95,7 @@ const SideBar = () => {
           })}
         </ListContainer>
       </SideBarSections>
-      <button className="text-[#FF1400]">Log out</button>
+      <button className="text-[#FF1400] self-start ml-[58px] ">Log out</button>
     </section>
   );
 };
