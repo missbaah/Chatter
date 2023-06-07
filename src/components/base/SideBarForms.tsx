@@ -1,8 +1,8 @@
 import Logo from "./Logo";
 
-const SideBar = () => {
+const SideBarForms = () => {
   return (
-    <section className="bg-black/50 h-[1024px] w-[622px] flex flex-col justify-center px-9">
+    <section className=" bg-black-500/50 h-[1024px] w-[622px] flex flex-col justify-center px-9">
       <div className="w-[550px] flex flex-col gap-6">
         <Logo />
         <p className="text-white text-2xl ">
@@ -14,4 +14,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default SideBarForms;

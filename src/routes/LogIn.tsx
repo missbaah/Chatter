@@ -1,12 +1,12 @@
 import PrimaryButtonLong from "../components/base/PrimaryButtonLong";
-import SideBar from "../components/base/SideBar";
+import SideBarForms from "../components/base/SideBarForms";
 import Input from "../components/forms/Input";
 import ProgessBar from "../components/forms/ProgessBar";
 
 const LogIn = () => {
   return (
     <main className="flex ">
-      <SideBar />
+      <SideBarForms />
       <section className="flex flex-col items-center justify-start mt-[96px] flex-1 ">
         <ProgessBar title="Welcome Back" page="login" />
         {/* <div className="w-[520px]">

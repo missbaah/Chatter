@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import SideBar from "../components/base/SideBar";
+import SideBarForms from "../components/base/SideBarForms";
 import ProgessBar from "../components/forms/ProgessBar";
 import Signup from "../components/forms/Signup";
 import { SignUpContext } from "../context/SignUpContext";
@@ -11,7 +11,7 @@ const SignUp = () => {
   console.log(signupContext?.stepCount);
   return (
     <main className="flex ">
-      <SideBar />
+      <SideBarForms />
       {signupContext?.stepCount == 0 ? (
         <section className="flex flex-col items-center justify-center flex-1 ">
           <ProgessBar title="Register as a Writer/Reader" page="signup" />
