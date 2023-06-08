@@ -1,4 +1,5 @@
 import PrimaryButton from "../base/PrimaryButton";
+import Post from "./Post";
 
 const Posts = () => {
   const filters = ["For you", "Featured", "Recent"];
@@ -8,8 +9,8 @@ const Posts = () => {
   });
 
   return (
-    <section className="border border-black-100 ml-6 mt-[30px] mr-[72px] h-screen flex flex-col gap-[49px] items-center">
-      <section id="top" className="flex justify-between w-[856px]  mt-[22px]">
+    <section className="border border-black-100 ml-6 mt-[30px] mr-[72px] h-auto flex flex-col gap-[49px] items-center">
+      <section id="top" className="flex justify-between w-[856px] mt-[22px]">
         <div className="flex flex-col gap-3 ">
           <h3 className="font-medium text-2xl">FEED</h3>
           <p className="text-black-400">Explore different content you love</p>
@@ -25,8 +26,13 @@ const Posts = () => {
         </div>
         <div
           id="posts-rendered"
-          className="border border-black-100 rounded-[8px] w-[856px]"
-        ></div>
+          className="border border-black-100 rounded-[8px] w-[856px] flex flex-col justify-center items-center"
+        >
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+        </div>
       </section>
     </section>
   );
