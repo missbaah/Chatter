@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { SignUpContext } from "../../context/SignUpContext";
+import OTPInput from "react-otp-input";
 
 const OTP = () => {
   const signupContext = useContext(SignUpContext);
@@ -23,7 +24,20 @@ const OTP = () => {
           verification
         </p>
       </section>
-      <>OTP</>
+      <OTPInput
+        numInputs={4}
+        renderInput={(props) => <input {...props} />}
+        onChange={() => {}}
+        value=""
+        containerStyle="w-[496.49px] flex justify-between mt-[49px]"
+        inputStyle={{
+          width: "106px",
+          height: "80px",
+          border: "1px solid #CED4DD",
+          borderRadius: "8px",
+        }}
+        // inputStyle="w-[106px] h-[80px] border border-solid border-[#CED4DD] rounded-[8px]"
+      />
       <PrimaryButtonLong
         type="submit"
         value="Create Account"
