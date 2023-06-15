@@ -1,10 +1,13 @@
 import Reviewer1 from "../../assets/reviewer1.png";
 import reading from "../../assets/Reading.svg";
 import BlogImage from "../../assets/postimage.svg";
+import Reactions from "../../assets/Reaction.svg";
+import Analytics from "../../assets/ic_outline-analytics.svg";
+import Comments from "../../assets/Comments.svg";
 
 const Post = () => {
   return (
-    <section className="w-[620px] h-[610px] ml-[44px] mt-[30px] flex flex-col gap-3">
+    <section className="w-[620px] h-[auto] ml-[44px] mt-[30px] flex flex-col gap-3 pb-[35px] border-b border-b-[#D0D0D0]">
       <section id="post-details" className="flex flex-col gap-6">
         <div className="flex flex-col gap-3">
           <div className="flex gap-[12px] items-center">
@@ -42,6 +45,20 @@ const Post = () => {
         </p>
       </section>
       <img src={BlogImage} alt="blog image" />
+      <section className="flex justify-between text-black-400">
+        <div className="flex gap-[11px] ">
+          <img src={Comments} alt="comment icon" />
+          <span>200</span>
+        </div>
+        <div className="flex gap-[11px]">
+          <img src={Reactions} alt="reactions icon" />
+          <span>200</span>
+        </div>
+        <div className="flex gap-[11px]">
+          <img src={Analytics} alt="analytics icon" />
+          <span>200</span>
+        </div>
+      </section>
     </section>
   );
 };

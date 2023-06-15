@@ -56,10 +56,10 @@ const SideBar = () => {
 
   const listOfActionItems = actionItems.map((item) => {
     return (
-      <li key={item.name} className="flex items-center gap-3">
+      <button key={item.name} className="flex items-center gap-3">
         <img src={item.icon} alt={item.name} />
         <p>{item.name}</p>
-      </li>
+      </button>
     );
   });
 

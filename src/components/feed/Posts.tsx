@@ -29,8 +29,11 @@ const Posts = () => {
           className="border border-black-100 rounded-[8px] w-[856px] flex flex-col justify-center items-center"
         >
           <Post />
+          <br />
           <Post />
+          <br />
           <Post />
+          <br />
           <Post />
         </div>
       </section>
