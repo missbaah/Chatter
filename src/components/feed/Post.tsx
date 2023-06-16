@@ -7,7 +7,7 @@ import Comments from "../../assets/Comments.svg";
 
 const Post = () => {
   return (
-    <section className="w-[620px] h-[auto] ml-[44px] mt-[30px] flex flex-col gap-3 pb-[35px] border-b border-b-[#D0D0D0]">
+    <section className="w-[620px] h-[auto]  mt-[30px] flex flex-col gap-3 pb-[35px] border-b border-b-[#D0D0D0]">
       <section id="post-details" className="flex flex-col gap-6">
         <div className="flex flex-col gap-3">
           <div className="flex gap-[12px] items-center">

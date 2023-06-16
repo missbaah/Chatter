@@ -5,7 +5,7 @@ import Posts from "../components/feed/Posts";
 import Analytics from "../components/feed/Analytics";
 
 const Feed = () => {
-  const [screen, setScreen] = useState("analytics");
+  const [screen, setScreen] = useState("");
 
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const feedScreen = event.currentTarget.childNodes[1].textContent;
