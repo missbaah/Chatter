@@ -2,6 +2,7 @@ type ButtonProps = {
   value: string;
   handleClick: (event: React.MouseEvent) => void;
   type?: string;
+  id?: string;
 };
 
 const PrimaryButton = (props: ButtonProps) => {
@@ -9,6 +10,7 @@ const PrimaryButton = (props: ButtonProps) => {
 
   return (
     <input
+      id={props.id}
       type={type}
       value={props.value}
       onClick={props.handleClick}

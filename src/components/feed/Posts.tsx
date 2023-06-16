@@ -1,7 +1,11 @@
 import PrimaryButton from "../base/PrimaryButton";
 import Post from "./Post";
 
-const Posts = () => {
+type PostsType = {
+  onPostClick: (event: React.MouseEvent<Element, MouseEvent>) => void;
+};
+
+const Posts = (props: PostsType) => {
   const filters = ["For you", "Featured", "Recent"];
 
   const listOfFilters = filters.map((filter) => {
@@ -15,7 +19,11 @@ const Posts = () => {
           <h3 className="font-medium text-2xl">FEED</h3>
           <p className="text-black-400">Explore different content you love</p>
         </div>
-        <PrimaryButton value="Post a content" handleClick={() => {}} />
+        <PrimaryButton
+          value="Post a content"
+          handleClick={props.onPostClick}
+          id="Post"
+        />
       </section>
       <section id="posts-container">
         <div
