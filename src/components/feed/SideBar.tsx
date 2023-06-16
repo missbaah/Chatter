@@ -9,7 +9,11 @@ import SideBarSections from "./SideBarSections";
 import Account from "../../assets/Account.svg";
 import Notification from "../../assets/Notification.svg";
 
-const SideBar = () => {
+type SideBarType = {
+  actionClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+};
+
+const SideBar = (props: SideBarType) => {
   const actionItems = [
     {
       icon: Teams,
@@ -56,7 +60,11 @@ const SideBar = () => {
 
   const listOfActionItems = actionItems.map((item) => {
     return (
-      <button key={item.name} className="flex items-center gap-3">
+      <button
+        key={item.name}
+        className="flex items-center gap-3"
+        onClick={props.actionClick}
+      >
         <img src={item.icon} alt={item.name} />
         <p>{item.name}</p>
       </button>
