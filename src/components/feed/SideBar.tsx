@@ -8,12 +8,14 @@ import ListContainer from "./ListContainer";
 import SideBarSections from "./SideBarSections";
 import Account from "../../assets/Account.svg";
 import Notification from "../../assets/Notification.svg";
+import { useNavigate } from "react-router-dom";
 
 type SideBarType = {
   actionClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const SideBar = (props: SideBarType) => {
+  const navigate = useNavigate();
   const actionItems = [
     {
       icon: Teams,
@@ -77,7 +79,14 @@ const SideBar = (props: SideBarType) => {
   return (
     <section className="flex flex-col gap-8 items-end text-left w-[268px] border border-black-100 h-screen">
       <div className="self-start ml-[58px]">
-        <h1 className="text-blue-500 text-[32px] font-medium">CHATTER</h1>
+        <h1
+          className="text-blue-500 text-[32px] font-medium"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          CHATTER
+        </h1>
       </div>
       <SideBarSections title={titles[0]}>
         <ListContainer>{listOfActionItems}</ListContainer>
